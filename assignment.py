@@ -1,7 +1,7 @@
 #!python3
 # Volume Calculator
 # Feel free to rename your variables
-
+import math
 
 def title():
     # Will display a title screen
@@ -47,7 +47,7 @@ def main():
     title()
 
 main()
-
+import math
 
 #efam
 
@@ -73,3 +73,23 @@ main()
 
 
 #me
+def Cube1():
+    a = float(input("What is Edge"))
+    x = Cube2(a,b)
+    print("volume is" + str(x))
+
+def Cube2(a):
+    x = (a * a * a)
+    return x
+
+
+
+
+
+
+def Cone1(r,h):
+    #r is raduis
+    #h is height
+    x = math.pi * (r**2) * (h // 3)
+    return x
+
