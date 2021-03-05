@@ -47,9 +47,6 @@ def main():
     title()
 
 main()
-import math
-
-#efam
 
 
 
@@ -62,7 +59,8 @@ import math
 
 
 
-#lieam
+
+
 
 
 
