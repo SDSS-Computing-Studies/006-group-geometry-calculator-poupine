@@ -4,20 +4,20 @@
 
 
 def title():
-    # Will display a title screen
-    # input parameters: none needed
-    # output parameters: None
-    # Author: Copper
-    # Modified:
-    # title
+    print("========================")
+    print("=== Volume Calulator ===")
+    print("========================")
+    print("\n")
+    print("Created by: Poupine")
+    print("\n")
     return None
 
 def instructions():
-    # Will display instructions
-    # input parameters: none needed
-    # output parameters: None
-    # Author:
-    # Modified:
+    print("- Type in the shape you want to find the volume with. !! (CASE SENSITIVE) !!")
+    print("- You will be asked to enter in the parameters of the shape depending on the one you choose.")
+    print("- If you want to quit, type \"Quit\" at any point of time when you're not current in an equation.")
+    print("\n")
+    print("List of shapes: Cube, Cone, Cylinder, Sphere, Pyramid, Triangular prism, Square prism, Circular prism, Hemisphere, Ellipsoid, Spherical Cap, Conical Frustum, Ellipsoid Volume")
     return None
 
 def getParams(shape):
@@ -46,4 +46,5 @@ def main():
     # the user chooses to exit
     title()
 
-main()
+title()
+instructions()
