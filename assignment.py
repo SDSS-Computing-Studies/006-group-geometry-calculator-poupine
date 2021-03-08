@@ -2,7 +2,6 @@
 # Volume Calculator
 # Feel free to rename your variables
 import math
-pi = math.pi()
 
 def title():
     print("========================")
