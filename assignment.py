@@ -22,7 +22,6 @@ def instructions():
     return None
 
 def getParams(shape):
-    prompts
 
     if shape == "Cube":
         prompts = {"Enter a side. "}
@@ -77,11 +76,11 @@ def cylinderV(r,h):
     return v
 
 def sphericalCap(r,h):
-    v = (pi * h * (3 * r**2 + h**2)) / 6
+    v = (math.pi() * h * (3 * r**2 + h**2)) / 6
     return v
 
 def conicalFrustum(r1,r2,h):
-    v = (1 / 3) * pi * h * (r1**2 + r2**2 + (r1 * r2))
+    v = (1 / 3) * math.pi() * h * (r1**2 + r2**2 + (r1 * r2))
     return v 
 
 def inputSphere(r):
@@ -97,7 +96,7 @@ def CubeVolume2(a):
 def ConeVolume1(r,h):
     #r is raduis
     #h is height
-    x = pi * (r**2) * (h / 3)
+    x = math.pi() * (r**2) * (h / 3)
     return x
 
 #pyramidvolume
@@ -117,17 +116,17 @@ def squareprism1(a,h):
 
 #cylinder
 def Cylinder(r,h):
-    x = pi * (r**2) * h
+    x = math.pi() * (r**2) * h
     return x
 
 #hemisphere
 def Hemisphere(r):
-    x = (2/3) * pi * (r**3)
+    x = (2/3) * math.pi() * (r**3)
     return x
 
 #ellipsoid
 def Ellipsoid(a,b,c):
-    x = (4/3) * pi * a * b * c
+    x = (4/3) * math.pi() * a * b * c
     return x
 
 #rectangularprism
