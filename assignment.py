@@ -2,7 +2,6 @@
 # Volume Calculator
 # Feel free to rename your variables
 import math
-pi = math.pi()
 
 def title():
     print("========================")
@@ -62,6 +61,15 @@ def main():
     # main block of code that will run your program and control program flow
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
+    instructions()
+    prompt
+    shape
+    shape = str(input("Please enter a shape."))
+    prompt = getParams(shape)
+    if prompt == False:
+        main()
+    else:
+        getInputs(shape)
     title()
     main()
 
