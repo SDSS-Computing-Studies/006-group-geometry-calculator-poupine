@@ -18,25 +18,43 @@ def instructions():
     print("- You will be asked to enter in the parameters of the shape depending on the one you choose.")
     print("- If you want to quit, type \"Quit\" at any point of time when you're not current in an equation.")
     print("\n")
-    print("List of shapes: Cube, Cone, Cylinder, Sphere, Pyramid, Triangular prism, Square prism, Circular prism, Hemisphere, Ellipsoid, Spherical Cap, Conical Frustum, Ellipsoid Volume")
+    print("List of shapes: Cube, Cone, Right Rectangular Prism, Cylinder, Sphere, Pyramid, Triangular prism, Square prism, Circular prism, Hemisphere, Ellipsoid, Spherical Cap, Conical Frustum")
     return None
 
 def getParams(shape):
-    # Will create a list of questions to be asked depending on the shape.
-    # These will be asked so that the user can enter in appropriate values
-    # input parameter: string 
-    # output parameter: return a list containing the prompts for each shape:
-    # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
     prompts
+
+    if shape == "Cube":
+        prompts = {"Enter a side. "}
+    elif shape == "Cone":
+        prompts = {"Enter the radius. ", "Enter the Height. "}
+    elif shape == "Cylinder":
+        prompts = {"Enter the radius. ", "Enter the Height. "}
+    elif shape == "Sphere":
+        prompts = {"Enter the radius. "}
+    elif shape == "Pyramid":
+        prompts = {"Enter the length. ", "Enter the width. ", "Enter the Height. "}
+    elif shape == "Triangular prism":
+        prompts = {"Enter a base side. ", "Enter a base side. ", "Enter a base side. ", "Enter the height. "}
+    elif shape == "Square prism":
+        prompts = {"Enter a base side. ", "Enter the height. "}
+    elif shape == "Circular prism":
+        prompts = {"Enter the base. ", "Enter the height. "}
+    elif shape == "Hemisphere":
+        prompts = {"Enter the radius. "}
+    elif shape == "Ellipsoid":
+        prompts = {"Enter a radius. ", "Enter a radius. ", "Enter a radius. "}
+    elif shape == "Spherical Cap":
+        prompts = {"Enter a radius. ", "Enter a radius. ", "Enter the height. "}
+    elif shape == "Conical Frustum":
+        prompts = {"Enter a radius. ", "Enter a radius. ", "Enter the height. "}
+    elif shape == "Right Rectangular Prism":
+        prompts = {"Enter the length. ", "Enter the width. ", "Enter the height. "}
 
     return prompts
 
 def getInputs(questions):
-    # Will prompt the user for inputs for the shape they.
-    # These will be asked so that the user can enter in appropriate values
-    # It will turn all the input data into a list
-    # input parameter: list containing the prompts/questions
-    # output parameter: return a list containing all the measurements of the shape
+
     measurements
     
     return measurements
@@ -51,10 +69,6 @@ def main():
 title()
 instructions()
 
-def inputCylinderV():
-    x = float(input("Enter the radius; "))
-    y = float(input("Enter the height: "))
-    return x,y
 
 def cylinderV(r,h):
     # r is radius
@@ -69,3 +83,7 @@ def sphericalCap(r,h):
 def conicalFrustum(r1,r2,h):
     v = (1 / 3) * pi * h * (r1**2 + r2**2 + (r1 * r2))
     return v 
+
+def inputSphere(r):
+    v = math.pi() * 3/4 * r**3
+    return v
