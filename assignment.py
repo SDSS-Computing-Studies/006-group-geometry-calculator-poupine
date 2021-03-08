@@ -51,6 +51,11 @@ def main():
 title()
 instructions()
 
+def inputCylinderV():
+    x = float(input("Enter the radius; "))
+    y = float(input("Enter the height: "))
+    return x,y
+
 def cylinder2(r,h):
     # r is radius
     # h is height
