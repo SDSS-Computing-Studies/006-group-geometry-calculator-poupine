@@ -56,8 +56,16 @@ def inputCylinderV():
     y = float(input("Enter the height: "))
     return x,y
 
-def cylinder2(r,h):
+def cylinderV(r,h):
     # r is radius
     # h is height
     v = math.pi() * r**2 * h
     return v
+
+def sphericalCap(r,h):
+    v = (pi * h * (3 * r**2 + h**2)) / 6
+    return v
+
+def conicalFrustum(r1,r2,h):
+    v = (1 / 3) * pi * h * (r1**2 + r2**2 + (r1 * r2))
+    return v 
