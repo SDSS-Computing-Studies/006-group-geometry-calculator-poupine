@@ -46,10 +46,12 @@ def getParams(shape):
         prompts = {"Enter a radius. ", "Enter a radius. ", "Enter a radius. "}
     elif shape == "Spherical Cap":
         prompts = {"Enter a radius. ", "Enter a radius. ", "Enter the height. "}
-    elif shape == "Conical Frustum"
+    elif shape == "Conical Frustum":
         prompts = {"Enter a radius. ", "Enter a radius. ", "Enter the height. "}
     elif shape == "Right Rectangular Prism":
         prompts = {"Enter the length. ", "Enter the width. ", "Enter the height. "}
+    else:
+        return False
 
     return prompts
 
@@ -60,14 +62,18 @@ def getInputs(questions):
     return measurements
 
 def main():
-    # main block of code that will run your program and control program flow
-    # You will need to include a while loop to keep repeating the commands until
-    # the user chooses to exit
     title()
-    main()
+    instructions()
+    prompt
+    shape
+    shape = str(input("Please enter a shape."))
+    prompt = getParams(shape)
+    if prompt == False:
+        main()
+    else:
+        getInputs(shape)
 
-title()
-instructions()
+        
 
 def inputCylinderV():
     x = float(input("Enter the radius; "))
