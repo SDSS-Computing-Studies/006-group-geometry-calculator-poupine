@@ -3,6 +3,7 @@
 # Feel free to rename your variables
 import math
 
+
 def title():
     print("========================")
     print("=== Volume Calulator ===")
@@ -57,22 +58,25 @@ def getInputs(questions):
     
     return measurements
 
-def main():
-    # main block of code that will run your program and control program flow
-    # You will need to include a while loop to keep repeating the commands until
-    # the user chooses to exit
-    instructions()
-    prompt = ""
-    shape = ""
-    shape = str(input("Please enter a shape. "))
-    prompt = getParams(shape)
-    if prompt == False:
-        main()
-    else:
-        getInputs(shape)
+def main(): 
+    quit = False
+    while quit == False:
+        instructions()
+        prompt = ""
+        shape = ""
+        shape = str(input("Please enter a shape. ")).strip()
+        if shape == "Quit":
+            exit()
+            break
+        else:
+            prompt = getParams(shape)
+            if prompt == False:
+                main()
+            else:
+                getInputs(shape)
+    
 title()
 main()
-
 
 def cylinderV(r,h):
     # r is radius
