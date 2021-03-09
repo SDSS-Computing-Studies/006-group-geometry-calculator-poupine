@@ -4,15 +4,25 @@
 import math
 
 def title():
-    print("========================")
-    print("=== Volume Calulator ===")
-    print("========================")
+    print("|========================|")
+    print("|=== Volume Calulator ===|")
+    print("|========================|")
+    print("| [Cube]          [Cone] |")
+    print("| [Sphere]     [Pyramid] |")
+    print("| [Cylinder] [Ellipsoid] |")
+    print("|   [Triangular prism]   |")
+    print("|     [Square prism]     |")
+    print("|    [Circular prism]    |")
+    print("|      [Hemisphere]      |")
+    print("|    [Spherical Cap]     |")
+    print("|    [Conical Frustum]   |")
+    print("|[Right RectangularPrism]|")
     print("\n")
     print("Created by: Poupine")
-    print("\n")
     return None
 
 def instructions():
+    print("\n")
     print("- Type in the shape you want to find the volume with. !! (CASE SENSITIVE) !!")
     print("- You will be asked to enter in the parameters of the shape depending on the one you choose.")
     print("- If you want to quit, type \"Quit\" at any point of time when you're not current in an equation.")
@@ -21,9 +31,7 @@ def instructions():
     return None
 
 def getParams(shape):
-
     prompts = []
-
     if shape == "Cube":
         prompts = ["Enter a side. "]
     elif shape == "Cone":
@@ -50,16 +58,12 @@ def getParams(shape):
         prompts = ["Enter a radius. ", "Enter a radius. ", "Enter the height. "]
     elif shape == "Right Rectangular Prism":
         prompts = ["Enter the length. ", "Enter the width. ", "Enter the height. "]
-
     return prompts
 
 def getInputs(questions):
-
     measurments = [0]
-    
     for i in range(0,len(questions)):
         measurments.append(float(input(questions[i])))
-
     return measurments
 
 def main(): 
@@ -81,7 +85,7 @@ def main():
 title()
 main()
 
-def cylinderV(r,h):
+def cylinder(r,h):
     # r is radius
     # h is height
     v = math.pi() * r**2 * h
