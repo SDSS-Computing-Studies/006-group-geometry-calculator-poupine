@@ -77,6 +77,35 @@ def main():
                 main()
             else:
                 inputs = getInputs(prompt)
+                e = 0
+                if shape == "Cube":
+                    e = CubeVolume2(inputs)
+                elif shape == "Cone":
+                    e = ConeVolume2(inputs)
+                elif shape == "Cylinder":
+                    e = cylinderV(inputs)
+                elif shape == "Sphere":
+                    e = inputSphere(inputs)
+                elif shape == "Pyramid":
+                    e = pyramid1(inputs)
+                elif shape == "Triangular prism":
+                    e = triangularprism1(inputs)
+                elif shape == "Square prism":
+                    e = squareprism1(inputs)
+                elif shape == "Circular prism":
+                    e = Cylinder(inputs)
+                elif shape == "Hemisphere":
+                    e = Hemisphere(inputs)
+                elif shape == "Ellipsoid":
+                    e = Ellipsoid(inputs)
+                elif shape == "Spherical Cap":
+                    e = sphericalCap(inputs)
+                elif shape == "Conical Frustum":
+                    e = conicalFrustum(inputs)
+                elif shape == "Right Rectangular Prism":
+                    e = rectangularprism(inputs)
+                print(e)
+
     
 title()
 main()
