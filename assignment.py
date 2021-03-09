@@ -56,11 +56,8 @@ def getParams(shape):
 def getInputs(questions):
 
     measurments = [0]
-    print(questions)
-    for i in questions:
-        measurments.append(float(input(i)))
     
-    for i in range(0,len(questions))
+    for i in range(0,len(questions)):
         measurments.append(float(input(questions[i])))
 
     return measurments
