@@ -23,6 +23,8 @@ def instructions():
 
 def getParams(shape):
 
+    prompts = {}
+
     if shape == "Cube":
         prompts = {"Enter a side. "}
     elif shape == "Cone":
@@ -54,26 +56,25 @@ def getParams(shape):
 
 def getInputs(questions):
 
-    measurements = ""
-    
-    return measurements
+    measurments = [0]
+    for i in questions:
+        measurments.append(float(input(questions[i])))
+
+    return measurments
 
 def main(): 
-    quit = False
-    while quit == False:
-        instructions()
-        prompt = ""
-        shape = ""
-        shape = str(input("Please enter a shape. ")).strip()
-        if shape == "Quit":
-            exit()
-            break
+    instructions()
+    prompt = ""
+    shape = ""
+    shape = str(input("Please enter a shape. ")).strip()
+    if shape == "Quit":
+        exit()
+    else:
+        prompt = getParams(shape)
+        if prompt == False:
+            main()
         else:
-            prompt = getParams(shape)
-            if prompt == False:
-                main()
-            else:
-                getInputs(shape)
+            inputs = getInputs(prompt)
     
 title()
 main()
