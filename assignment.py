@@ -2,7 +2,7 @@
 # Volume Calculator
 # Feel free to rename your variables
 import math
-
+quit = False
 
 def title():
     print("========================")
@@ -23,58 +23,64 @@ def instructions():
 
 def getParams(shape):
 
-    prompts = {}
+    prompts = []
 
     if shape == "Cube":
-        prompts = {"Enter a side. "}
+        prompts = ["Enter a side. "]
     elif shape == "Cone":
-        prompts = {"Enter the radius. ", "Enter the Height. "}
+        prompts = ["Enter the radius. ", "Enter the Height. "]
     elif shape == "Cylinder":
-        prompts = {"Enter the radius. ", "Enter the Height. "}
+        prompts = ["Enter the radius. ", "Enter the Height. "]
     elif shape == "Sphere":
-        prompts = {"Enter the radius. "}
+        prompts = ["Enter the radius. "]
     elif shape == "Pyramid":
-        prompts = {"Enter the length. ", "Enter the width. ", "Enter the Height. "}
+        prompts = ["Enter the length. ", "Enter the width. ", "Enter the Height. "]
     elif shape == "Triangular prism":
-        prompts = {"Enter a base side. ", "Enter a base side. ", "Enter a base side. ", "Enter the height. "}
+        prompts = ["Enter a base side. ", "Enter a base side. ", "Enter a base side. ", "Enter the height. "]
     elif shape == "Square prism":
-        prompts = {"Enter a base side. ", "Enter the height. "}
+        prompts = ["Enter a base side. ", "Enter the height. "]
     elif shape == "Circular prism":
-        prompts = {"Enter the base. ", "Enter the height. "}
+        prompts = ["Enter the base. ", "Enter the height. "]
     elif shape == "Hemisphere":
-        prompts = {"Enter the radius. "}
+        prompts = ["Enter the radius. "]
     elif shape == "Ellipsoid":
-        prompts = {"Enter a radius. ", "Enter a radius. ", "Enter a radius. "}
+        prompts = ["Enter a radius. ", "Enter a radius. ", "Enter a radius. "]
     elif shape == "Spherical Cap":
-        prompts = {"Enter a radius. ", "Enter a radius. ", "Enter the height. "}
+        prompts = ["Enter a radius. ", "Enter a radius. ", "Enter the height. "]
     elif shape == "Conical Frustum":
-        prompts = {"Enter a radius. ", "Enter a radius. ", "Enter the height. "}
+        prompts = ["Enter a radius. ", "Enter a radius. ", "Enter the height. "]
     elif shape == "Right Rectangular Prism":
-        prompts = {"Enter the length. ", "Enter the width. ", "Enter the height. "}
+        prompts = ["Enter the length. ", "Enter the width. ", "Enter the height. "]
 
     return prompts
 
 def getInputs(questions):
 
     measurments = [0]
+    print(questions)
     for i in questions:
+        measurments.append(float(input(i)))
+    
+    for i in range(0,len(questions))
         measurments.append(float(input(questions[i])))
 
     return measurments
 
 def main(): 
-    instructions()
-    prompt = ""
-    shape = ""
-    shape = str(input("Please enter a shape. ")).strip()
-    if shape == "Quit":
-        exit()
-    else:
-        prompt = getParams(shape)
-        if prompt == False:
-            main()
+    quit = False
+    while quit == False:
+        instructions()
+        prompt = ""
+        shape = ""
+        shape = str(input("Please enter a shape. ")).strip()
+        if shape == "Quit":
+            quit = True
         else:
-            inputs = getInputs(prompt)
+            prompt = getParams(shape)
+            if prompt == False:
+                main()
+            else:
+                inputs = getInputs(prompt)
     
 title()
 main()
