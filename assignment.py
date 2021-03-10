@@ -175,7 +175,8 @@ def main():
                     e = rectangularprism(inputs[0], inputs[1], inputs[2])
                 elif shape == "Right square pyramid":
                     e = Rightsquarepyramid(inputs[0], inputs[1],)
-                print(e)
+                if e > 0:
+                    print("The volume of the " + str(shape) + " is " + str(e))
 
     
 title()
