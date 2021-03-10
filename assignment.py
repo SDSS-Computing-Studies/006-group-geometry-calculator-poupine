@@ -13,10 +13,10 @@ def title():
     print("|   [Triangular prism]   |")
     print("|     [Square prism]     |")
     print("|    [Circular prism]    |")
+    print("|   [Rectangular Prism]  |")
     print("|      [Hemisphere]      |")
     print("|    [Spherical Cap]     |")
     print("|    [Conical Frustum]   |")
-    print("|[Right RectangularPrism]|")
     print("\n")
     print("Created by: Poupine")
     return None
@@ -83,9 +83,9 @@ def main():
                 inputs = getInputs(prompt)
                 e = 0
                 if shape == "Cube":
-                    e = CubeVolume2(inputs)
+                    e = Cube(inputs)
                 elif shape == "Cone":
-                    e = ConeVolume1(inputs)
+                    e = ConeVolume(inputs)
                 elif shape == "Cylinder":
                     e = cylinder(inputs)
                 elif shape == "Sphere":
@@ -133,12 +133,12 @@ def Sphere(r):
     return v
 
 #cubevolume
-def CubeVolume2(a):
+def Cube(a):
     x = (a * a * a)
     return x
 
 #conevolume
-def ConeVolume1(r,h):
+def ConeVolume(r,h):
     #r is raduis
     #h is height
     x = math.pi() * (r**2) * (h / 3)
