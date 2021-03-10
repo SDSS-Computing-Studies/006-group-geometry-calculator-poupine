@@ -49,11 +49,6 @@ def squareprism1(a,h):
     x = ((a**2) * h)
     return x 
 
-#cylinder
-def Cylinder(r,h):
-    x = math.pi() * (r**2) * h
-    return x
-
 #hemisphere
 def Hemisphere(r):
     x = (2/3) * math.pi() * (r**3)
@@ -69,6 +64,11 @@ def rectangularprism(l,w,h):
     x = l * w * h
     return x
 
+#Circularprism
+def Rightsquarepyramid(a,h):
+    x = (a**2) * (h/3)
+    return x
+
 def title():
     print("|========================|")
     print("|=== Volume Calulator ===|")
@@ -78,7 +78,7 @@ def title():
     print("| [Cylinder] [Ellipsoid] |")
     print("|   [Triangular prism]   |")
     print("|     [Square prism]     |")
-    print("|    [Circular prism]    |")
+    print("| [Right square pyramid] |")
     print("|   [Rectangular Prism]  |")
     print("|      [Hemisphere]      |")
     print("|    [Spherical Cap]     |")
@@ -93,7 +93,7 @@ def instructions():
     print("- You will be asked to enter in the parameters of the shape depending on the one you choose.")
     print("- If you want to quit, type \"Quit\" at any point of time when you're not current in an equation.")
     print("\n")
-    print("List of shapes: Cube, Cone, Right Rectangular Prism, Cylinder, Sphere, Pyramid, Triangular prism, Square prism, Circular prism, Hemisphere, Ellipsoid, Spherical Cap, Conical Frustum")
+    print("List of shapes: Cube, Cone, Right Rectangular Prism, Cylinder, Sphere, Pyramid, Triangular prism, Square prism, Right square pyramid, Hemisphere, Ellipsoid, Spherical Cap, Conical Frustum")
     return None
 
 def getParams(shape):
@@ -124,6 +124,8 @@ def getParams(shape):
         prompts = ["Enter a radius. ", "Enter a radius. ", "Enter the height. "]
     elif shape == "Right Rectangular Prism":
         prompts = ["Enter the length. ", "Enter the width. ", "Enter the height. "]
+    elif shape == "Right square pyramid":
+        prompts = ["Enter a side. ", "Enter the height. "]
     return prompts
 
 def getInputs(questions):
@@ -162,8 +164,6 @@ def main():
                     e = triangularprism1(inputs[0], inputs[1], inputs[2], inputs[3])
                 elif shape == "Square prism":
                     e = squareprism1(inputs[0], inputs[1])
-                elif shape == "Circular prism":
-                    e = Cylinder(inputs[0], inputs[1])
                 elif shape == "Hemisphere":
                     e = Hemisphere(inputs[0])
                 elif shape == "Ellipsoid":
@@ -174,9 +174,10 @@ def main():
                     e = conicalFrustum(inputs[0], inputs[1], inputs[2])
                 elif shape == "Right Rectangular Prism":
                     e = rectangularprism(inputs[0], inputs[1], inputs[2])
+                elif shape == "Right square pyramid":
+                    e = Rightsquarepyramid(inputs[0], inputs[1],)
                 print(e)
 
     
 title()
 main()
-
