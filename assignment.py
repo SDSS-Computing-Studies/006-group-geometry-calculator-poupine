@@ -30,6 +30,7 @@ def Cube(a):
 def ConeVolume(r,h):
     #r is raduis
     #h is height
+    print(r, h)
     x = math.pi() * (r**2) * (h / 3)
     return x
 
@@ -150,29 +151,29 @@ def main():
                 if shape == "Cube":
                     e = Cube(inputs[0])
                 elif shape == "Cone":
-                    e = ConeVolume(inputs)
+                    e = ConeVolume(inputs[0], inputs[1])
                 elif shape == "Cylinder":
-                    e = cylinder(inputs)
+                    e = cylinder(inputs[0], inputs[1])
                 elif shape == "Sphere":
-                    e = Sphere(inputs)
+                    e = Sphere(inputs[0], inputs[1])
                 elif shape == "Pyramid":
-                    e = pyramid1(inputs)
+                    e = pyramid1(inputs[0], inputs[1], inputs[2])
                 elif shape == "Triangular prism":
-                    e = triangularprism1(inputs)
+                    e = triangularprism1(inputs[0], inputs[1], inputs[2], inputs[3])
                 elif shape == "Square prism":
-                    e = squareprism1(inputs)
+                    e = squareprism1(inputs[0], inputs[1])
                 elif shape == "Circular prism":
-                    e = Cylinder(inputs)
+                    e = Cylinder(inputs[0], inputs[1])
                 elif shape == "Hemisphere":
-                    e = Hemisphere(inputs)
+                    e = Hemisphere(inputs[0])
                 elif shape == "Ellipsoid":
-                    e = Ellipsoid(inputs)
+                    e = Ellipsoid(inputs[0], inputs[1], inputs[2])
                 elif shape == "Spherical Cap":
-                    e = sphericalCap(inputs)
+                    e = sphericalCap(inputs[0], inputs[1], inputs[2])
                 elif shape == "Conical Frustum":
-                    e = conicalFrustum(inputs)
+                    e = conicalFrustum(inputs[0], inputs[1], inputs[2])
                 elif shape == "Right Rectangular Prism":
-                    e = rectangularprism(inputs)
+                    e = rectangularprism(inputs[0], inputs[1], inputs[2])
                 print(e)
 
     
