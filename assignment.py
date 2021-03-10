@@ -23,7 +23,7 @@ def Sphere(r):
 
 #cubevolume
 def Cube(a):
-    x = (a * a * a)
+    x = a[0] * a[0] * a[0]
     return x
 
 #conevolume
@@ -126,9 +126,9 @@ def getParams(shape):
     return prompts
 
 def getInputs(questions):
-    measurments = [0]
+    measurments = []
     for i in range(0,len(questions)):
-        measurments.append(float(input(questions[i])))
+        measurments.append(int(input(questions[i])))
     return measurments
 
 def main(): 
