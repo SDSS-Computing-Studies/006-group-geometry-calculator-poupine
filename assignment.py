@@ -3,6 +3,71 @@
 # Feel free to rename your variables
 import math
 
+def cylinder(r,h):
+    # r is radius
+    # h is height
+    v = math.pi() * r**2 * h
+    return v
+
+def sphericalCap(r,h):
+    v = (math.pi() * h * (3 * r**2 + h**2)) / 6
+    return v
+
+def conicalFrustum(r1,r2,h):
+    v = (1 / 3) * math.pi() * h * (r1**2 + r2**2 + (r1 * r2))
+    return v 
+
+def Sphere(r):
+    v = math.pi() * 3/4 * r**3
+    return v
+
+#cubevolume
+def Cube(a):
+    x = (a * a * a)
+    return x
+
+#conevolume
+def ConeVolume(r,h):
+    #r is raduis
+    #h is height
+    x = math.pi() * (r**2) * (h / 3)
+    return x
+
+#pyramidvolume
+def pyramid1(l,w,h):
+    x = (l * w * h /3)
+    return x
+
+#triangularprism
+def triangularprism1(a,b,c,h):
+    x = 0.25 * h * math.sqrt( (-a **4) + 2 * ((a * b)**2) + 2 * ((a * c)**2) - (b**4) + 2 * ((b * c)**2) - (c**4)) 
+    return x
+
+#squareprism
+def squareprism1(a,h):
+    x = ((a**2) * h)
+    return x 
+
+#cylinder
+def Cylinder(r,h):
+    x = math.pi() * (r**2) * h
+    return x
+
+#hemisphere
+def Hemisphere(r):
+    x = (2/3) * math.pi() * (r**3)
+    return x
+
+#ellipsoid
+def Ellipsoid(a,b,c):
+    x = (4/3) * math.pi() * a * b * c
+    return x
+
+#rectangularprism
+def rectangularprism(l,w,h):
+    x = l * w * h
+    return x
+
 def title():
     print("|========================|")
     print("|=== Volume Calulator ===|")
@@ -114,67 +179,3 @@ def main():
 title()
 main()
 
-def cylinder(r,h):
-    # r is radius
-    # h is height
-    v = math.pi() * r**2 * h
-    return v
-
-def sphericalCap(r,h):
-    v = (math.pi() * h * (3 * r**2 + h**2)) / 6
-    return v
-
-def conicalFrustum(r1,r2,h):
-    v = (1 / 3) * math.pi() * h * (r1**2 + r2**2 + (r1 * r2))
-    return v 
-
-def Sphere(r):
-    v = math.pi() * 3/4 * r**3
-    return v
-
-#cubevolume
-def Cube(a):
-    x = (a * a * a)
-    return x
-
-#conevolume
-def ConeVolume(r,h):
-    #r is raduis
-    #h is height
-    x = math.pi() * (r**2) * (h / 3)
-    return x
-
-#pyramidvolume
-def pyramid1(l,w,h):
-    x = (l * w * h /3)
-    return x
-
-#triangularprism
-def triangularprism1(a,b,c,h):
-    x = 0.25 * h * math.sqrt( (-a **4) + 2 * ((a * b)**2) + 2 * ((a * c)**2) - (b**4) + 2 * ((b * c)**2) - (c**4)) 
-    return x
-
-#squareprism
-def squareprism1(a,h):
-    x = ((a**2) * h)
-    return x 
-
-#cylinder
-def Cylinder(r,h):
-    x = math.pi() * (r**2) * h
-    return x
-
-#hemisphere
-def Hemisphere(r):
-    x = (2/3) * math.pi() * (r**3)
-    return x
-
-#ellipsoid
-def Ellipsoid(a,b,c):
-    x = (4/3) * math.pi() * a * b * c
-    return x
-
-#rectangularprism
-def rectangularprism(l,w,h):
-    x = l * w * h
-    return x
