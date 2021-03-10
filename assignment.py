@@ -85,11 +85,11 @@ def main():
                 if shape == "Cube":
                     e = CubeVolume2(inputs)
                 elif shape == "Cone":
-                    e = ConeVolume2(inputs)
+                    e = ConeVolume1(inputs)
                 elif shape == "Cylinder":
-                    e = cylinderV(inputs)
+                    e = cylinder(inputs)
                 elif shape == "Sphere":
-                    e = inputSphere(inputs)
+                    e = Sphere(inputs)
                 elif shape == "Pyramid":
                     e = pyramid1(inputs)
                 elif shape == "Triangular prism":
@@ -128,7 +128,7 @@ def conicalFrustum(r1,r2,h):
     v = (1 / 3) * math.pi() * h * (r1**2 + r2**2 + (r1 * r2))
     return v 
 
-def inputSphere(r):
+def Sphere(r):
     v = math.pi() * 3/4 * r**3
     return v
 
