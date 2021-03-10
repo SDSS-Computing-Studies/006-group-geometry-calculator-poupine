@@ -6,7 +6,7 @@ import math
 def cylinder(r,h):
     # r is radius
     # h is height
-    v = math.pi() * r**2 * h
+    v = float(math.pi() * r**2 * h)
     return v
 
 def sphericalCap(r,h):
@@ -129,7 +129,7 @@ def getParams(shape):
 def getInputs(questions):
     measurments = []
     for i in range(0,len(questions)):
-        measurments.append(int(input(questions[i])))
+        measurments.append(float(input(questions[i])))
     return measurments
 
 def main(): 
