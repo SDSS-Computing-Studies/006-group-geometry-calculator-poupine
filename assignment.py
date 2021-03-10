@@ -23,7 +23,7 @@ def Sphere(r):
 
 #cubevolume
 def Cube(a):
-    x = a[0] * a[0] * a[0]
+    x = a * a * a
     return x
 
 #conevolume
@@ -148,7 +148,7 @@ def main():
                 inputs = getInputs(prompt)
                 e = 0
                 if shape == "Cube":
-                    e = Cube(inputs)
+                    e = Cube(inputs[0])
                 elif shape == "Cone":
                     e = ConeVolume(inputs)
                 elif shape == "Cylinder":
