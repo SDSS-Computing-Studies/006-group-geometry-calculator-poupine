@@ -2,23 +2,22 @@
 # Volume Calculator
 # Feel free to rename your variables
 import math
-
 def cylinder(r,h):
     # r is radius
     # h is height
-    v = float(math.pi() * r**2 * h)
+    v = float(math.pi * r**2 * h)
     return v
 
 def sphericalCap(r,h):
-    v = (math.pi() * h * (3 * r**2 + h**2)) / 6
+    v = (math.pi * h * (3 * r**2 + h**2)) / 6
     return v
 
 def conicalFrustum(r1,r2,h):
-    v = (1 / 3) * math.pi() * h * (r1**2 + r2**2 + (r1 * r2))
+    v = (1 / 3) * math.pi * h * (r1**2 + r2**2 + (r1 * r2))
     return v 
 
 def Sphere(r):
-    v = math.pi() * 3/4 * r**3
+    v = math.pi * 3/4 * r**3
     return v
 
 #cubevolume
@@ -31,7 +30,7 @@ def ConeVolume(r,h):
     #r is raduis
     #h is height
     print(r, h)
-    x = math.pi() * (r**2) * (h / 3)
+    x = math.pi * (r**2) * (h / 3)
     return x
 
 #pyramidvolume
@@ -51,12 +50,12 @@ def squareprism1(a,h):
 
 #hemisphere
 def Hemisphere(r):
-    x = (2/3) * math.pi() * (r**3)
+    x = (2/3) * math.pi * (r**3)
     return x
 
 #ellipsoid
 def Ellipsoid(a,b,c):
-    x = (4/3) * math.pi() * a * b * c
+    x = (4/3) * math.pi * a * b * c
     return x
 
 #rectangularprism
