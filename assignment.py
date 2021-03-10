@@ -5,7 +5,7 @@ import math
 def cylinder(r,h):
     # r is radius
     # h is height
-    v = float(math.pi * r**2 * h)
+    v = (math.pi * r**2 * h)
     return v
 
 def sphericalCap(r,h):
