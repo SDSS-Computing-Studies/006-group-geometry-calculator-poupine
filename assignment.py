@@ -33,7 +33,7 @@ def Sphere(r):
     # Will calculate the volume for a Sphere.
     # input parameters: Radius of the sphere.
     # output parameters: Volume
-    # Author: Liam
+    # Author: Nolan
     # Modified March 10th, 2021
     v = math.pi * 3/4 * r**3
     return v
@@ -266,4 +266,3 @@ def main():
 
     
 title()
-main()
