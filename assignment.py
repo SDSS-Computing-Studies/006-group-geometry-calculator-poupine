@@ -3,72 +3,138 @@
 # Feel free to rename your variables
 import math
 def cylinder(r,h):
-    # r is radius
-    # h is height
+    # Will calculate the volume for a Cylinder.
+    # input parameters: Raidus and height of the Cylinder
+    # output parameters: Volume
+    # Author: Nolan
+    # Modified March 10th, 2021
     v = (math.pi * r**2 * h)
     return v
 
 def sphericalCap(r,h):
+    # Will calculate the volume for a Spherical Cap.
+    # input parameters: Radius and Height of the object
+    # output parameters: Volume
+    # Author: Nolan
+    # Modified March 10th, 2021
     v = (math.pi * h * (3 * r**2 + h**2)) / 6
     return v
 
 def conicalFrustum(r1,r2,h):
+    # Will calculate the volume for a Conical Frustum.
+    # input parameters: 3x Radius of the object
+    # output parameters: Volume
+    # Author: Nolan
+    # Modified March 10th, 2021
     v = (1 / 3) * math.pi * h * (r1**2 + r2**2 + (r1 * r2))
     return v 
 
 def Sphere(r):
+    # Will calculate the volume for a Sphere.
+    # input parameters: Radius of the sphere.
+    # output parameters: Volume
+    # Author: Nolan
+    # Modified March 10th, 2021
     v = math.pi * 3/4 * r**3
     return v
 
 #cubevolume
 def Cube(a):
+    # Will calculate the volume for a Cube.
+    # input parameters: Side length of the cube.
+    # output parameters: Volume
+    # Author: Liam
+    # Modified March 10th, 2021
     x = a * a * a
     return x
 
 #conevolume
 def ConeVolume(r,h):
-    #r is raduis
-    #h is height
+    # Will calculate the volume for a Cone.
+    # input parameters: Radius and height of the Cone.
+    # output parameters: Volume
+    # Author: Liam
+    # Modified March 10th, 2021
     print(r, h)
     x = math.pi * (r**2) * (h / 3)
     return x
 
 #pyramidvolume
 def pyramid1(l,w,h):
+    # Will calculate the volume for a Pyramid.
+    # input parameters: Length, width and height of the Pyramid.
+    # output parameters: Volume
+    # Author: Liam
+    # Modified March 10th, 2021
     x = (l * w * h /3)
     return x
 
 #triangularprism
 def triangularprism1(a,b,c,h):
+    # Will calculate the volume for a Square Prism.
+    # input parameters: Base side length and Height of the square prism
+    # output parameters: Volume
+    # Author: Liam
+    # Modified March 10th, 2021
     x = 0.25 * h * math.sqrt( (-a **4) + 2 * ((a * b)**2) + 2 * ((a * c)**2) - (b**4) + 2 * ((b * c)**2) - (c**4)) 
     return x
 
 #squareprism
 def squareprism1(a,h):
+    # Will calculate the volume for a Square Prism.
+    # input parameters: Base side length and Height of the square prism
+    # output parameters: Volume
+    # Author: Liam
+    # Modified March 10th, 2021
     x = ((a**2) * h)
     return x 
 
 #hemisphere
 def Hemisphere(r):
+    # Will calculate the volume for an Hemisphere.
+    # input parameters: Radius of the Hemisphere
+    # output parameters: Volume
+    # Author: Liam
+    # Modified March 10th, 2021
     x = (2/3) * math.pi * (r**3)
     return x
 
 #ellipsoid
 def Ellipsoid(a,b,c):
+    # Will calculate the volume for an Ellipsoid.
+    # input parameters: 3x radius of the Ellipsoid
+    # output parameters: Volume
+    # Author: Liam
+    # Modified March 10th, 2021
     x = (4/3) * math.pi * a * b * c
     return x
 
 #rectangularprism
 def rectangularprism(l,w,h):
+    # Will calculate the volume for a rectangular prism.
+    # input parameters: Length, width and height of the rectangular prism
+    # output parameters: Volume
+    # Author: Liam
+    # Modified March 10th, 2021
     x = l * w * h
     return x
 
 #Circularprism
 def Rightsquarepyramid(a,h):
+    # Will calculate the volume for a right square pyramid.
+    # input parameters: Area and height of the pyramid
+    # output parameters: Volume
+    # Author: Liam
+    # Modified March 10th, 2021
     x = (a**2) * (h/3)
     return x
 
 def title():
+    # Will display the title screen to the user.
+    # input parameters: None
+    # output parameters: None
+    # Author: Liam
+    # Modified March 10th, 2021
     print("|========================|")
     print("|=== Volume Calulator ===|")
     print("|========================|")
@@ -87,6 +153,11 @@ def title():
     return None
 
 def instructions():
+    # Will display the instructions to the user.
+    # input parameters: None
+    # output parameters: None
+    # Author: Ethan
+    # Modified March 10th, 2021
     print("\n")
     print("- Type in the shape you want to find the volume with. !! (CASE SENSITIVE) !!")
     print("- You will be asked to enter in the parameters of the shape depending on the one you choose.")
@@ -96,6 +167,11 @@ def instructions():
     return None
 
 def getParams(shape):
+    # Will help select the prompts needed for the equations.
+    # input parameters: Shape of Object
+    # output parameters: Table of prompts
+    # Author: Ethan
+    # Modified March 10th, 2021
     prompts = []
     if shape == "Cube":
         prompts = ["Enter a side. "]
@@ -128,12 +204,22 @@ def getParams(shape):
     return prompts
 
 def getInputs(questions):
+    # Will generate the chosen questions and prompt the user
+    # input parameters: Questions table
+    # output parameters: The inputs that the user submitted for each
+    # Author: Nolan
+    # Modified March 10th, 2021 by Liam
     measurments = []
     for i in range(0,len(questions)):
         measurments.append(float(input(questions[i])))
     return measurments
 
 def main(): 
+    # Main function that runs everything
+    # input parameters: None
+    # output parameters: Final Volume
+    # Author: Ethan
+    # Modified March 10th, 2021
     quit = False
     while quit == False:
         instructions()
