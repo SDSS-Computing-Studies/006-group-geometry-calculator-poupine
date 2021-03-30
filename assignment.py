@@ -2,6 +2,8 @@
 # Volume Calculator
 # Feel free to rename your variables
 import math
+
+#Cylinder Volume
 def cylinder(r,h):
     # Will calculate the volume for a Cylinder.
     # input parameters: Raidus and height of the Cylinder
@@ -11,6 +13,7 @@ def cylinder(r,h):
     v = (math.pi * r**2 * h)
     return v
 
+#SphericalCap Volume
 def sphericalCap(r,h):
     # Will calculate the volume for a Spherical Cap.
     # input parameters: Radius and Height of the object
@@ -20,6 +23,7 @@ def sphericalCap(r,h):
     v = (math.pi * h * (3 * r**2 + h**2)) / 6
     return v
 
+#ConicalFrustum Volume
 def conicalFrustum(r1,r2,h):
     # Will calculate the volume for a Conical Frustum.
     # input parameters: 3x Radius of the object
@@ -29,6 +33,7 @@ def conicalFrustum(r1,r2,h):
     v = (1 / 3) * math.pi * h * (r1**2 + r2**2 + (r1 * r2))
     return v 
 
+#Sphere Volume
 def Sphere(r):
     # Will calculate the volume for a Sphere.
     # input parameters: Radius of the sphere.
@@ -38,7 +43,7 @@ def Sphere(r):
     v = math.pi * 3/4 * r**3
     return v
 
-#cubevolume
+#Cube Volume
 def Cube(a):
     # Will calculate the volume for a Cube.
     # input parameters: Side length of the cube.
@@ -48,7 +53,7 @@ def Cube(a):
     x = a * a * a
     return x
 
-#conevolume
+#Cone Volume
 def ConeVolume(r,h):
     # Will calculate the volume for a Cone.
     # input parameters: Radius and height of the Cone.
@@ -59,7 +64,7 @@ def ConeVolume(r,h):
     x = math.pi * (r**2) * (h / 3)
     return x
 
-#pyramidvolume
+#Pyramid Volume
 def pyramid1(l,w,h):
     # Will calculate the volume for a Pyramid.
     # input parameters: Length, width and height of the Pyramid.
@@ -69,7 +74,7 @@ def pyramid1(l,w,h):
     x = (l * w * h /3)
     return x
 
-#triangularprism
+#TriangularPrism Volume
 def triangularprism1(a,b,c,h):
     # Will calculate the volume for a Square Prism.
     # input parameters: Base side length and Height of the square prism
@@ -79,7 +84,7 @@ def triangularprism1(a,b,c,h):
     x = 0.25 * h * math.sqrt( (-a **4) + 2 * ((a * b)**2) + 2 * ((a * c)**2) - (b**4) + 2 * ((b * c)**2) - (c**4)) 
     return x
 
-#squareprism
+#SquarePrism Volume
 def squareprism1(a,h):
     # Will calculate the volume for a Square Prism.
     # input parameters: Base side length and Height of the square prism
@@ -89,7 +94,7 @@ def squareprism1(a,h):
     x = ((a**2) * h)
     return x 
 
-#hemisphere
+#Hemisphere Volume
 def Hemisphere(r):
     # Will calculate the volume for an Hemisphere.
     # input parameters: Radius of the Hemisphere
@@ -99,7 +104,7 @@ def Hemisphere(r):
     x = (2/3) * math.pi * (r**3)
     return x
 
-#ellipsoid
+#Ellipsoid Volume
 def Ellipsoid(a,b,c):
     # Will calculate the volume for an Ellipsoid.
     # input parameters: 3x radius of the Ellipsoid
@@ -109,7 +114,7 @@ def Ellipsoid(a,b,c):
     x = (4/3) * math.pi * a * b * c
     return x
 
-#rectangularprism
+#RectangularPrism Volume
 def rectangularprism(l,w,h):
     # Will calculate the volume for a rectangular prism.
     # input parameters: Length, width and height of the rectangular prism
@@ -119,7 +124,7 @@ def rectangularprism(l,w,h):
     x = l * w * h
     return x
 
-#Circularprism
+#CircularPrism Volume
 def Rightsquarepyramid(a,h):
     # Will calculate the volume for a right square pyramid.
     # input parameters: Area and height of the pyramid
@@ -129,6 +134,7 @@ def Rightsquarepyramid(a,h):
     x = (a**2) * (h/3)
     return x
 
+#Title
 def title():
     # Will display the title screen to the user.
     # input parameters: None
@@ -152,6 +158,7 @@ def title():
     print("Created by: Poupine")
     return None
 
+#Instructions
 def instructions():
     # Will display the instructions to the user.
     # input parameters: None
